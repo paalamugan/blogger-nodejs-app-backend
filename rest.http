@@ -1,0 +1,220 @@
+@BASE_API_URL = http://127.0.0.1:4000/v1
+@API_KEY = GCMUDiuY5a7WvyUNt9n3QztToSHzK7Uj
+
+### Health check
+GET {{BASE_API_URL}}/healthcheck HTTP/1.1
+content-type: application/json
+
+### Sign Up
+POST {{BASE_API_URL}}/signup HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+
+{
+  "name": "Paalamugan",
+  "email": "abc11@gmail.com",
+  "password": "password",
+  "profilePicUrl": "https://avatars.githubusercontent.com/u/42642576?v=4",
+  "role": "WRITER"
+}
+
+### Log In
+POST {{BASE_API_URL}}/login HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+
+{
+  "email": "abc1@gmail.com",
+  "password": "password"
+}
+
+### Token Refresh
+POST {{BASE_API_URL}}/token/refresh HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+{
+  "refreshToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxOTJjZjFiMTkyMjQ5ZTk3YzhjMjk0YjU5MzkwYWRkY2I3OGE1NjUyMjJjN2JjZWU5NjY4MDQ4OTFiM2E5ZjU3MjE4YmQzNzFkNGUwZmM4YWZjZjZiYWUyMWNiMWZlMDdiNzIwYjk5NGU4MjM1MDM4NDJlYTU2ZDUzM2I0ZGNlZSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjQ0NzgyOTI4fQ.RtqXH1hFBhifi9gzWJm80WpdXJz2SAdv0vmocYgO1X2GeZV2_9SWbLh35lGLt7cs2MspxkpYJrxnN9zOdKfA5g"
+}
+
+### Blogs tag with tag name
+GET {{BASE_API_URL}}/blogs/tag/:tagId?pageNumber=1&pageItemCount=20 HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blogs author id
+GET {{BASE_API_URL}}/blogs/author/id/:authorId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blogs latest
+GET {{BASE_API_URL}}/blogs/latest?pageNumber=1&pageItemCount=20 HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blogs similar id
+GET {{BASE_API_URL}}/blogs/similar/id/:similarId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog url
+GET {{BASE_API_URL}}/blog/url?endpoint="my-blog" HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog id
+GET {{BASE_API_URL}}/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer
+POST {{BASE_API_URL}}/writer/blog HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+{
+  "title": "my first blog",
+  "description": "my first blog",
+  "text": "blog content",
+  "blogUrl": "my first1 blog",
+  "imgUrl": "https://avatars.githubusercontent.com/u/42642576?v=4",
+  "score": 1,
+  "tags": ["New"]
+}
+
+### Blog writer id
+PUT {{BASE_API_URL}}/writer/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+{
+  "title": "my first blog",
+  "description": "my first blog",
+  "text": "blog content",
+  "blogUrl": "my-first-blog",
+  "imgUrl": "https://avatars.githubusercontent.com/u/42642576?v=4",
+  "score": 1,
+  "tags": ["Ne"]
+}
+
+### Blog writer submit
+PUT {{BASE_API_URL}}/writer/blog/submit/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer draft
+PUT {{BASE_API_URL}}/writer/blog/withdraw/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer delete
+DELETE {{BASE_API_URL}}/writer/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer submit all
+GET {{BASE_API_URL}}/writer/blog/submitted/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer published all
+GET {{BASE_API_URL}}/writer/blog/published/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer drafts all
+GET {{BASE_API_URL}}/writer/blog/drafts/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog writer get id
+GET {{BASE_API_URL}}/writer/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor update publish id
+PUT {{BASE_API_URL}}/editor/blog/publish/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor update unpublish id
+GET {{BASE_API_URL}}/editor/blog/unpublish/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor delete blog Id
+DELETE {{BASE_API_URL}}/editor/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor submit all
+GET {{BASE_API_URL}}/editor/blog/submitted/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor published all
+GET {{BASE_API_URL}}/editor/blog/published/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor drafts all
+GET {{BASE_API_URL}}/editor/blog/drafts/all HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### Blog editor get id
+GET {{BASE_API_URL}}/editor/blog/id/:blogId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### profile public id
+GET {{BASE_API_URL}}/profile/public/id/:publicProfileId HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### profile get
+GET {{BASE_API_URL}}/profile/me HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+### profile update
+PUT {{BASE_API_URL}}/profile HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZiMzE1MGI0NTkwYzM3OTBjZjk0MGQiLCJwcm0iOiIxYmNjOTEyNWVkY2ZkNzUxMTk4MGFjYjgzZmI0ZmYzMWRlODZkOTdkYTIzZmM4NjQyYzY2OWMxZmExYzMzY2VmMTdiMmVmOGM5ZDI2NDk5ZTdkN2MxZjJjOWI4MzdjYzdkNmM3YWE0ZDQ3OGFjOTJiZjQ4NWM1OWIxMDBhNDUxNSIsImlhdCI6MTYzNDQxNDkyOCwiZXhwIjoxNjM3MDA2OTI4fQ.krpqJH-72cHyd1dae4hoVBHVeTiyE0F-Vq1N9aKKJGXG9HswVKMnk_IkCeCeWxniOZdd-T0GZtww-zVvaHrpPA
+
+{
+  "name": "Paalamugan",
+  "profilePicUrl": "https://avatars.githubusercontent.com/u/42642576?v=4"
+}
+
+### Log Out
+GET {{BASE_API_URL}}/logout HTTP/1.1
+content-type: application/json
+x-api-key: {{API_KEY}}
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjbXMtYmxvZy5jb20iLCJhdWQiOiJjbXMtYmxvZy5jb20iLCJzdWIiOiI2MTZhZmIwZTBiZjdlMzBkOTRlZWMwNDQiLCJwcm0iOiI4NjQ3Njg3NmM3NDFmNDEwODllOWFjNzIyZWViMDIyMDUxZTY5OWIyN2M1MGE0NzcwMTVmZWFmNzFlM2QwZTJiMTg0NmVmYjM3YWI4Yzg0MzMxNzhkZDM3ZWZhMWE2YmRlMjBhNWJiZDkyNjk5YTk1ZGU3NjE0MGQyYTc1ZmEyZCIsImlhdCI6MTYzNDQwNTc3MCwiZXhwIjoxNjM2OTk3NzcwfQ.NuWOkjG14OJcPRTguH5ZE2WHbFIE7UHh9xDVKMyEcz_mvc1WcBe807UkhjCtNmi2wOtFypoxT-HlQu3fbeX2RQ
