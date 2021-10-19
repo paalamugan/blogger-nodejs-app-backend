@@ -37,10 +37,10 @@ Following are the features of this project:
 </p>
 <br>
 
-## You can find the complete API documentation [here](https://documenter.getpostman.com/view/1552895/SzYUZg52?version=latest)
+<!-- ## You can find the complete API documentation [here](https://documenter.getpostman.com/view/1552895/SzYUZg52?version=latest)
 <a href="https://documenter.getpostman.com/view/1552895/SzYUZg52?version=latest" target="_blank">
     <img src="https://raw.githubusercontent.com/paalamugan/nodejs-blog-typescript-backend/master/addons/github_assets/api-doc-button.png" width="200" height="60"/>
-</a>
+</a> -->
 
 ## How to build and run this project
 
