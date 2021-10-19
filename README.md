@@ -16,8 +16,8 @@ Following are the features of this project:
 * **Unit test is favored**: The tests have been written to test the functions and routes without the need of the database server. Integration tests has also been done but the unit test is favored.
 * **A pure backend project**: We have experienced that when a backend is developed clubbed with a frontend then in the future it becomes really difficult to scale. We would want to create a separate backend project that servers many websites and mobile apps.
 
-## We have also open source a complete blogging website working on this backend project: [Goto Repository](https://github.com/paalamugan/react-blog-app-architecture)
-> In the above repository [**React.js Isomorphic Web Application Architecture**] we will learn and build a React web application for a blogging platform using this project as its API server. [Visit demo website](https://react-blog-app-architecture.paalamugan.com)
+## We have also open source a complete blogging website working on this backend project: [Goto Repository](https://github.com/paalamugan/blogger-react-app-frontend)
+> In the above repository [**React.js Isomorphic Web Application Architecture**] we will learn and build a React web application for a blogging platform using this project as its API server. [Visit demo website](https:/blogger-react-app-frontend.heroku.app)
 
 ## 3RE Architecture: Router, RouteHandler, ResponseHandler, ErrorHandler
 <p align="center">
