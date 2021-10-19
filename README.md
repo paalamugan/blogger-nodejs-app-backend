@@ -69,10 +69,10 @@ Following are the features of this project:
     * Execute `npm start` and You will be able to access the API from http://localhost:3000
     * To run the tests execute `npm test`.
  
-  ## Learn Backend Development From Our Videos
+<!--   ## Learn Backend Development From Our Videos
   * [Introduction to Web Backend Development for Beginners](https://youtu.be/Q0nfLi-4GBg)
   * [Backend System Design for Startups](https://www.youtube.com/playlist?list=PLqOiaH9id5quh5Dph5yuXfdHVGe1LrKvT)
-  * [Practical Javascript for Beginners](https://www.youtube.com/playlist?list=PLqOiaH9id5qtw5MhI-C1G3CS7RVZ8ejct)
+  * [Practical Javascript for Beginners](https://www.youtube.com/playlist?list=PLqOiaH9id5qtw5MhI-C1G3CS7RVZ8ejct) -->
   
  ## Project Directory Structure
  ```
