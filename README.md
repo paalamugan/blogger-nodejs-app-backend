@@ -21,25 +21,25 @@ Following are the features of this project:
 
 ## 3RE Architecture: Router, RouteHandler, ResponseHandler, ErrorHandler
 <p align="center">
-    <img src="https://raw.githubusercontent.com/paalamugan/nodejs-blog-typescript-backend/master/addons/github_assets/3RE.png">
+    <img src="https://raw.githubusercontent.com/paalamugan/blogger-nodejs-app-backend/master/addons/github_assets/3RE.png">
 </p>
 <br>
 
 ## Project Outline: Blogging Platform
 <p align="center">
-    <img src="https://raw.githubusercontent.com/paalamugan/nodejs-blog-typescript-backend/master/addons/github_assets/project-outline.png">
+    <img src="https://raw.githubusercontent.com/paalamugan/blogger-nodejs-app-backend/master/addons/github_assets/project-outline.png">
 </p>
 <br>
 
 ## Request-Response Handling Schematic Diagram
 <p align="center">
-    <img src="https://raw.githubusercontent.com/paalamugan/nodejs-blog-typescript-backend/master/addons/github_assets/api-structure.png">
+    <img src="https://raw.githubusercontent.com/paalamugan/blogger-nodejs-app-backend/master/addons/github_assets/api-structure.png">
 </p>
 <br>
 
 <!-- ## You can find the complete API documentation [here](https://documenter.getpostman.com/view/1552895/SzYUZg52?version=latest)
 <a href="https://documenter.getpostman.com/view/1552895/SzYUZg52?version=latest" target="_blank">
-    <img src="https://raw.githubusercontent.com/paalamugan/nodejs-blog-typescript-backend/master/addons/github_assets/api-doc-button.png" width="200" height="60"/>
+    <img src="https://raw.githubusercontent.com/paalamugan/blogger-nodejs-app-backend/master/addons/github_assets/api-doc-button.png" width="200" height="60"/>
 </a> -->
 
 ## How to build and run this project

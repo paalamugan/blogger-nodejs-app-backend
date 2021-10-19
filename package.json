@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-blog-typescript-backend",
+  "name": "blogger-nodejs-app-backend",
   "version": "1.0.0",
   "description": "The architecture for nodejs blog backend application. It is build on top of expressjs using typescript.",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/paalamugan/nodejs-blog-typescript-backend.git"
+    "url": "https://github.com/paalamugan/blogger-nodejs-app-backend.git"
   },
   "author": "Paalamugan",
   "license": "Apache-2.0",
